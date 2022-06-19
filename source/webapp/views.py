@@ -8,4 +8,5 @@ def index_view(request):
     return render(request, "index.html")
 
 
+
 def
