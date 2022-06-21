@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <p>Guess 4 numbers. Enter them separated with spaces:</p>
+    <h1>Guess 4 numbers.</h1>
     <form action="/" method="post" >
-    <input type="text" name="numbers"/>
-    <input type="submit" value="Send"/>
-</form>
+        {% csrf_token %}
+
+        <label>Enter them separated with spaces:</label>
+        <input type="text" name="numbers"/>
+        <input type="submit" value="Send"/>
+
+        <h2 class = "my-3">{{ result }}</h2>
+
+    </form>
 </body>
 </html>
