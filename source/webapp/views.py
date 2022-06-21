@@ -52,3 +52,4 @@ def get_result(request):
     else:
         return "No identical number"
 
+
